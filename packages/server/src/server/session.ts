@@ -1191,6 +1191,7 @@ export class Session {
                 kind: "remove",
                 parentAgentId: update.parentAgentId,
                 subagentId: update.subagentId,
+                ...(update.retainTimeline ? { retainTimeline: true } : {}),
               },
             });
           }
